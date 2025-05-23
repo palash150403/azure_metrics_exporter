@@ -312,7 +312,7 @@ func (ac *AzureClient) getMetricNamespaces() (map[string]MetricNamespaceCollecti
 
 // Returns AzureMetricDefinitionResponse for a given resource
 func (ac *AzureClient) getAzureMetricDefinitionResponse(resource string, metricNamespace string) (*AzureMetricDefinitionResponse, error) {
-	apiVersion := "2019-07-01"
+	apiVersion := "2023-10-01"
 
 	metricsResource := fmt.Sprintf("subscriptions/%s%s", sc.C.Credentials.SubscriptionID, resource)
 	metricsTarget := fmt.Sprintf("%s/%s/providers/microsoft.insights/metricDefinitions?api-version=%s", sc.C.ResourceManagerURL, metricsResource, apiVersion)
@@ -585,7 +585,7 @@ type batchRequest struct {
 }
 
 func resourceURLFrom(resource string, metricNamespace string, metricNames string, aggregations []string) string {
-	apiVersion := "2019-07-01"
+	apiVersion := "2023-10-01"
 
 	path := fmt.Sprintf(
 		"/subscriptions/%s%s/providers/microsoft.insights/metrics",
