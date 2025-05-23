@@ -1,4 +1,4 @@
-module github.com/RobustPerception/azure_metrics_exporter
+module github.com/palash150403/azure_metrics_exporter
 
 go 1.13
 

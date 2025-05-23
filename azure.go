@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/RobustPerception/azure_metrics_exporter/config"
+	"github.com/palash150403/azure_metrics_exporter/config"
 )
 
 var (
